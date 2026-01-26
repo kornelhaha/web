@@ -1,0 +1,65 @@
+footer {
+    background: #151515;
+    border-top: 1px solid #222;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.contact-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.contact-info {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 30px;
+    background: #0a0a0a;
+    border: 1px solid #222;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.contact-info:hover {
+    border-color: #ff82f7;
+}
+
+.contact-info i {
+    color: #ff82f7;
+    font-size: 1.5rem;
+}
+
+.discord-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.discord-label {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.discord-username {
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.copyright {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #222;
+}
+
+.copyright p {
+    color: #666;
+    font-size: 0.9rem;
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kornel | portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/tech.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span id="typedText"></span><span class="typing-cursor"></span>
+            </h1>
+            <p class="hero-subtitle">Just a dev doing some things</p>
+
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="skill-title">Anticheat Development</h3>
+                    <p class="skill-description">Advanced exploit detection and prevention systems</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="skill-title">Web Development</h3>
+                    <p class="skill-description">Full-stack frontend and backend development</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3 class="skill-title">Physics & Math</h3>
+                    <p class="skill-description">Complex mathematical systems and physics engines in Roblox</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <h2 class="section-title">My Projects</h2>
+        <div class="projects-grid" id="projectsGrid">
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="section-title">Website was built with</h2>
+        <div class="tech-grid">
+            <div class="tech-card">
+                <div class="tech-icon">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <h3 class="tech-name">HTML5</h3>
+                <p class="tech-description">Markup Language</p>
+            </div>
+
+            <div class="tech-card">
+                <div class="tech-icon">
+                    <i class="fab fa-css3-alt"></i>
+                </div>
+                <h3 class="tech-name">CSS3</h3>
+                <p class="tech-description">Styling & Animations</p>
+            </div>
+
+            <div class="tech-card">
+                <div class="tech-icon">
+                    <i class="fab fa-js"></i>
+                </div>
+                <h3 class="tech-name">JavaScript</h3>
+                <p class="tech-description">Interactive Frontend</p>
+            </div>
+
+            <div class="tech-card">
+                <div class="tech-icon">
+                    <i class="fas fa-font"></i>
+                </div>
+                <h3 class="tech-name">Font Awesome</h3>
+                <p class="tech-description">Icon Library</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <h3 class="contact-title">Get In Touch</h3>
+            <div class="contact-info">
+                <i class="fab fa-discord"></i>
+                <div class="discord-info">
+                    <span class="discord-label">Discord</span>
+                    <span class="discord-username">.kornel37</span>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>© 2026.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <button class="close-btn" onclick="closeModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-info">
+                    <div>
+                        <h3><i class="fas fa-info-circle"></i> Description</h3>
+                        <p id="modalDescription"></p>
+                    </div>
+                    <div>
+                        <h3><i class="fas fa-calendar"></i> Date Created</h3>
+                        <p id="modalDate"></p>
+                    </div>
+                    <div>
+                        <h3><i class="fas fa-tools"></i> Tools Used</h3>
+                        <ul id="modalTools"></ul>
+                    </div>
+                    <div>
+                        <h3><i class="fas fa-tags"></i> Contains</h3>
+                        <div class="all-tags" id="modalTags"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="modal-video" id="modalVideo">
+                        <div class="video-placeholder">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
