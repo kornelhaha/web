@@ -63,6 +63,16 @@ const text = "Kornel";
                 description: "An AI created to 1:1 mirror the player's every movement and rotation. It works almost flawlessly, but for some reason roblox breaks when I try to do this with an R15 rig, it worked with R6 but that just looked ugly.",
                 date: "January, 2026",
                 tools: ["CMake", "Roblox API", "Math"]
+            },
+            {
+                id: 6,
+                title: "Platform Generator",
+                video: "https://www.youtube.com/embed/xv1rQAVPtc8",
+                tags: ["Math", "Physics", "CMake", "Kinda Cool"],
+                allTags: ["Math", "Physics", "CMake", "Terrain"],
+                description: "A cool little project of mine, basically wherever the player moves it generates a platform below them to keep them from falling.",
+                date: "January, 2026",
+                tools: ["CMake", "Roblox API", "Math"]
             }
         ];
 
@@ -132,5 +142,6 @@ const text = "Kornel";
                 closeModal();
             }
         }
+
 
         renderProjects();
