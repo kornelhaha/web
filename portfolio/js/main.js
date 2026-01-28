@@ -12,6 +12,51 @@ function type() {
 
 setTimeout(type, 500);
 
+const clickTracking = {
+
+    storageKey: 'project_clicks',
+    
+    init() {
+        if (!localStorage.getItem(this.storageKey)) {
+            const initialData = {};
+            projects.forEach(project => {
+                initialData[project.id] = 0;
+            });
+            localStorage.setItem(this.storageKey, JSON.stringify(initialData));
+        }
+    },
+    
+    trackClick(projectId, projectTitle) {
+        const data = JSON.parse(localStorage.getItem(this.storageKey)) || {};
+        data[projectId] = (data[projectId] || 0) + 1;
+        localStorage.setItem(this.storageKey, JSON.stringify(data));
+        
+        console.log(`Project clicked: ${projectTitle} (ID: ${projectId}) - Total clicks: ${data[projectId]}`);
+        
+        this.sendToAnalytics(projectId, projectTitle, data[projectId]);
+    },
+    
+    sendToAnalytics(projectId, projectTitle, clickCount) {
+    },
+    
+    getStats() {
+        return JSON.parse(localStorage.getItem(this.storageKey)) || {};
+    },
+    
+    getClicks(projectId) {
+        const data = this.getStats();
+        return data[projectId] || 0;
+    },
+    
+    reset() {
+        const initialData = {};
+        projects.forEach(project => {
+            initialData[project.id] = 0;
+        });
+        localStorage.setItem(this.storageKey, JSON.stringify(initialData));
+    }
+};
+
 const projects = [
     {
         id: 1,
@@ -113,9 +158,26 @@ function renderProjects() {
     }).join('');
 }
 
+function updateClickCounter(projectId) {
+    const counter = document.querySelector(`.click-counter[data-project-id="${projectId}"] .click-count`);
+    if (counter) {
+        const clicks = clickTracking.getClicks(projectId);
+        counter.textContent = clicks;
+        
+        counter.parentElement.style.transform = 'scale(1.1)';
+        setTimeout(() => {
+            counter.parentElement.style.transform = 'scale(1)';
+        }, 200);
+    }
+}
+
 function openModal(projectId) {
     const project = projects.find(p => p.id === projectId);
-    if (!project) return;    
+    if (!project) return;
+
+    clickTracking.trackClick(projectId, project.title);
+    
+    updateClickCounter(projectId);
 
     document.getElementById('modalTitle').textContent = project.title;
     document.getElementById('modalDescription').textContent = project.description;
@@ -156,5 +218,5 @@ window.onclick = function(event) {
     }
 }
 
+clickTracking.init();
 renderProjects();
-
