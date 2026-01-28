@@ -117,6 +117,16 @@ const projects = [
         description: "A cool little project of mine, basically wherever the player moves it generates a platform below them to keep them from falling.",
         date: "January, 2026",
         tools: ["CMake", "Roblox API", "Math"]
+    },
+    {
+        id: 7,
+        title: "Advanced Authentication",
+        video: "https://www.youtube.com/embed/2hKIzWWY9Kk",
+        tags: ["Authentication", "Secure", "Advanced"],
+        allTags: ["Authentication", "Secure", "Email", "Advanced"],
+        description: "An advanced authentication system that lets the user decide how they want to be authenticated. Currently available: user+pass, email+pass, email+code. Phone number soon.",
+        date: "In Development",
+        tools: ["NodeJs", "NodeMail", "MongoDB"]
     }
 ];
 
