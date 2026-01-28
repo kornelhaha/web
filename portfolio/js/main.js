@@ -152,7 +152,6 @@ function renderProjects() {
                 <button class="details-btn" onclick="openModal(${project.id}); event.stopPropagation();">
                     <i class="fas fa-info-circle"></i> See Details
                 </button>
-                <div class="click-counter" data-project-id="${project.id}"><i class="fas fa-eye"></i> <span class="click-count">${clicks}</span> views</div>
             </div>
         `;
     }).join('');
