@@ -81,10 +81,10 @@ const projects = [
     {
         id: 3,
         title: "Catalyst Web Dashboard",
-        video: "https://www.youtube.com/embed/onDUKyJazjo",
+        video: "",
         tags: ["Frontend", "Backend", "Data Storing", "Auth System"],
         allTags: ["Frontend", "Backend", "Data Storing", "Auth System", "Database"],
-        description: "An advanced website designed for my anti-cheat, it includes an authentication system, account creation and management, API key creation and management, soon it will have the detections integrated and more.",
+        description: "Posting an updated version soon.",
         date: "In Development",
         tools: ["MongoDB", "Thunder Client", "NodeJS"]
     },
