@@ -81,10 +81,10 @@ const projects = [
     {
         id: 3,
         title: "Catalyst Web Dashboard",
-        video: "",
+        video: "https://www.youtube.com/embed/PEfnYdCFuXc",
         tags: ["Frontend", "Backend", "Data Storing", "Auth System"],
         allTags: ["Frontend", "Backend", "Data Storing", "Auth System", "Database"],
-        description: "Posting an updated version soon.",
+        description: "A feature rich dashboard for my anticheat.",
         date: "In Development",
         tools: ["MongoDB", "Thunder Client", "NodeJS"]
     },
@@ -219,3 +219,4 @@ window.onclick = function(event) {
 
 clickTracking.init();
 renderProjects();
+
