@@ -75,7 +75,7 @@ const projects = [
         tags: ["Anti-Cheat", "Exploit Detections"],
         allTags: ["Luau", "Roblox API", "Exploit Detections", "Data Storing", "Optimization"],
         description: "Advanced anti-cheat detecting lots of exploits including: Fly, Bhop, NoClip, Speed, ESP, Aimbot, Silent Aim and a lot more. The anti-cheat also includes advanced configurating and data storing. By default it autobans and the output for both flags and bans are integrated through a discord webhook url and soon my website. In the video only a few detections of the anti-cheat is showcased due to my laziness",
-        date: "In Development",
+        date: "Discontinued",
         tools: ["Luau", "Roblox API","NodeJS Server", "MongoDB"]
     },
     {
@@ -85,7 +85,7 @@ const projects = [
         tags: ["Frontend", "Backend", "Data Storing", "Auth System"],
         allTags: ["Frontend", "Backend", "Data Storing", "Auth System", "Database"],
         description: "A feature rich dashboard for my anticheat.",
-        date: "In Development",
+        date: "Discontinued",
         tools: ["MongoDB", "Thunder Client", "NodeJS"]
     },
     {
@@ -125,7 +125,7 @@ const projects = [
         tags: ["Authentication", "Secure", "Advanced"],
         allTags: ["Authentication", "Secure", "Email", "Advanced"],
         description: "An advanced authentication system that lets the user decide how they want to be authenticated. Currently available: user+pass, email+pass, email+code. Phone number soon.",
-        date: "In Development",
+        date: "January, 2026",
         tools: ["NodeJs", "NodeMail", "MongoDB"]
     }
 ];
@@ -219,4 +219,5 @@ window.onclick = function(event) {
 
 clickTracking.init();
 renderProjects();
+
 
